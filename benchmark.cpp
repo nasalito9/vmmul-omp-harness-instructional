@@ -53,6 +53,8 @@ bool check_accuracy(double *A, double *Anot, int nvalues)
 /* The benchmarking program */
 int main(int argc, char** argv) 
 {
+    std::chrono::time_point<std::chrono::high_resolution_clock> end_time;
+    std::chrono::time_point<std::chrono::high_resolution_clock> start_time;
     std::cout << "Description:\t" << dgemv_desc << std::endl << std::endl;
 
     std::cout << std::fixed << std::setprecision(5);
@@ -93,19 +95,33 @@ int main(int argc, char** argv)
         memcpy((void *)Ycopy, (const void *)Y, sizeof(double)*n);
 
         // insert start timer code here
-
+        start_time = std::chrono::high_resolution_clock::now();
         // call the method to do the work
         my_dgemv(n, A, X, Y); 
 
         // insert end timer code here, and print out the elapsed time for this problem size
-
-
+        end_time = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> total_time = end_time - start_time;
+        printf(" Sum result = %lld \n",t);
+        std::cout << "Total Time : " << total_time.count() << std::endl;
         // now invoke the cblas method to compute the matrix-vector multiplye
         reference_dgemv(n, Acopy, Xcopy, Ycopy);
 
         // compare your result with that computed by BLAS
         if (check_accuracy(Ycopy, Y, n) == false)
            printf(" Error: your answer is not the same as that computed by BLAS. \n");
+
+        double num_operations = 2.0 * n ^ 2;  // Assuming 2n^2 floating-point operations
+        double MFLOPS = (num_operations / duration.count()) / 1e6;
+        double bytes = n * sizeof(uint64_t);
+
+        // Print out the duration time for this problem size
+        double capacity = 204.8; // Theoretical peak memory bandwidth in GB/s
+        // Calculate memory bandwidth utilization (in GB/s)
+        double membandWidth = (bytes / (duration.count() * 1e9)) / capacity * 100.0;
+        std::cout << duration.count() << " seconds" << std::endl;
+        std::cout << " MFLOP/s: " << MFLOPS << std::endl;
+        std::cout << " %memBandwidth: " << membandWidth << std::endl;
     
     } // end loop over problem sizes
 
