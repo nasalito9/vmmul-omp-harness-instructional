@@ -111,13 +111,13 @@ int main(int argc, char** argv)
            printf(" Error: your answer is not the same as that computed by BLAS. \n");
 
         double num_operations = 2.0 * pow(n,2);  // Assuming 2n^2 floating-point operations
-        double MFLOPS = (num_operations / std::chrono::duration.count()) / 1e6;
+        double MFLOPS = (num_operations / total_time.count()) / 1e6;
         double bytes = n * sizeof(uint64_t);
 
         // Print out the duration time for this problem size
         double capacity = 204.8; // Theoretical peak memory bandwidth in GB/s
         // Calculate memory bandwidth utilization (in GB/s)
-        double membandWidth = (bytes / (duration.count() * 1e9)) / capacity * 100.0;
+        double membandWidth = (bytes / (total_time.count() * 1e9)) / capacity * 100.0;
         std::cout << duration.count() << " seconds" << std::endl;
         std::cout << " MFLOP/s: " << MFLOPS << std::endl;
         std::cout << " %memBandwidth: " << membandWidth << std::endl;
