@@ -102,7 +102,6 @@ int main(int argc, char** argv)
         // insert end timer code here, and print out the elapsed time for this problem size
         end_time = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> total_time = end_time - start_time;
-        printf(" Sum result = %lld \n",t);
         std::cout << "Total Time : " << total_time.count() << std::endl;
         // now invoke the cblas method to compute the matrix-vector multiplye
         reference_dgemv(n, Acopy, Xcopy, Ycopy);
@@ -111,8 +110,8 @@ int main(int argc, char** argv)
         if (check_accuracy(Ycopy, Y, n) == false)
            printf(" Error: your answer is not the same as that computed by BLAS. \n");
 
-        double num_operations = 2.0 * n ^ 2;  // Assuming 2n^2 floating-point operations
-        double MFLOPS = (num_operations / duration.count()) / 1e6;
+        double num_operations = 2.0 * pow(n,2);  // Assuming 2n^2 floating-point operations
+        double MFLOPS = (num_operations / std::chrono::duration.count()) / 1e6;
         double bytes = n * sizeof(uint64_t);
 
         // Print out the duration time for this problem size
