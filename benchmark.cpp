@@ -118,7 +118,7 @@ int main(int argc, char** argv)
         double capacity = 204.8; // Theoretical peak memory bandwidth in GB/s
         // Calculate memory bandwidth utilization (in GB/s)
         double membandWidth = (bytes / (total_time.count() * 1e9)) / capacity * 100.0;
-        std::cout << duration.count() << " seconds" << std::endl;
+        std::cout << total_time.count() << " seconds" << std::endl;
         std::cout << " MFLOP/s: " << MFLOPS << std::endl;
         std::cout << " %memBandwidth: " << membandWidth << std::endl;
     
