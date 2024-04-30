@@ -1,0 +1,13 @@
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:11:21: missed: couldn't vectorize loop
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:29: missed: not vectorized: complicated access pattern.
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:12:24: missed: couldn't vectorize loop
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: missed: not vectorized: complicated access pattern.
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:9:6: note: vectorized 0 loops in function.
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Analysis failed with vector mode V4DF
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** The result for vector mode V32QI would be the same
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Re-trying analysis with vector mode V16QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Analysis failed with vector mode V16QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Re-trying analysis with vector mode V8QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Analysis failed with vector mode V8QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Re-trying analysis with vector mode V4QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Analysis failed with vector mode V4QI
