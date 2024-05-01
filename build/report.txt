@@ -11,3 +11,16 @@
 /global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Analysis failed with vector mode V8QI
 /global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Re-trying analysis with vector mode V4QI
 /global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:13:15: note: ***** Analysis failed with vector mode V4QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:11:21: missed: couldn't vectorize loop
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:15:29: missed: not vectorized: complicated access pattern.
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:14:24: optimized: loop vectorized using 32 byte vectors
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:14:24: optimized: loop vectorized using 16 byte vectors
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:9:6: note: vectorized 1 loops in function.
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:17:12: note: ***** Analysis failed with vector mode V4DF
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:17:12: note: ***** The result for vector mode V32QI would be the same
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:17:12: note: ***** Re-trying analysis with vector mode V16QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:17:12: note: ***** Analysis failed with vector mode V16QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:17:12: note: ***** Re-trying analysis with vector mode V8QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:17:12: note: ***** Analysis failed with vector mode V8QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:17:12: note: ***** Re-trying analysis with vector mode V4QI
+/global/homes/n/nasalito/vmmul-omp-harness-instructional/dgemv-vectorized.cpp:17:12: note: ***** Analysis failed with vector mode V4QI
